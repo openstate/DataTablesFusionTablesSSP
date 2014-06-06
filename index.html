@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subsidietracker</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').dataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax": 'api.php',
+            "columns": [
+                {"name": "aaaaaa", "searchable": false},
+                {"name": "bbbbbb", "searchable": false},
+                {"name": "cccccc", "searchable": true},
+                {"name": "dddddd", "searchable": false},
+                {"name": "eeeeee", "searchable": false},
+            ]
+        } );
+    } );
+    </script>
+</head>
+<body>
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Ministerie</th>
+                <th>Regeling</th>
+                <th>Ontvanger</th>
+                <th>Beleidsartikel</th>
+                <th>Realisatie</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+<tr>
+    <th>Ministerie</th>
+    <th>Regeling</th>
+    <th>Ontvanger</th>
+    <th>Beleidsartikel</th>
+    <th>Realisatie</th>
+</tr>
+        </tfoot>
+    </table>
+</body>
+</html>
